@@ -73,6 +73,12 @@ p {
   }
 }
 
+/*Some fixings, optionals*/
+
+.nav li:hover {
+  background-color: $gray;
+}
+
 /* footer */
 
 footer {
