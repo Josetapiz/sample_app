@@ -1,7 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
+      <% if signed_in? %>
+      <%= link_to "ChemTa", current_user, id: "logo" %>
+      <% else %>
       <%= link_to "ChemTa", root_path, id: "logo" %>
+      <% end %>
       <nav>
         <ul class="nav pull-right">
           <% if signed_in? %>

@@ -1,4 +1,5 @@
 @import "bootstrap";
+
 /* mixings, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -81,7 +82,7 @@ p {
 
 /*Some fixings, optionals*/
 
-.nav li:hover {
+nav li:hover {
   background-color: $gray;
 }
 
