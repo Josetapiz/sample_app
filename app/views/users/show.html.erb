@@ -3,7 +3,11 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
+        <% if @user.photo? %>  
+        <%= image_tag @user.photo.url(:small) %>
+        <% else %>
+        <%= gravatar_for @user, size: 52 %>
+        <% end %>
         <%= @user.name %>
       </h1>
     </section>

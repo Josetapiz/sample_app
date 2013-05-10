@@ -1,5 +1,4 @@
 @import "bootstrap";
-
 /* mixings, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -195,9 +194,10 @@ aside {
   }
 }
 
-.gravatar {
+.gravatar, .photo {
   float: left;
   margin-right: 10px;
+  display: inline-block;
 }
 
 /* microposts */
@@ -218,11 +218,6 @@ aside {
 
 .timestamp {
   color: $grayLight;
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
 }
 
 aside {
