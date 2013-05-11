@@ -18,9 +18,9 @@ class User < ActiveRecord::Base
       :thumb=> "100x100#",
       :small  => "65x65>",
       :url => "/images/:attachment/:id_:style.:extension",
-      :path => ":rails_root/public/images/:attachment/:id_:style.:extension" }
+      :path => ":rails_root/app/assets/images/:attachment/:id_:style.:extension" }
 
-  validates_attachment_presence :photo
+  #validates_attachment_presence :photo
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 

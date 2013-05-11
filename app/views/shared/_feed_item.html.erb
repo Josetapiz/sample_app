@@ -1,9 +1,9 @@
 <li id="<%= feed_item.id %>">
   <% if current_user.photo? %> 
-  <a href="<%= user_path(current_user) %>"><%= image_tag( current_user.photo.url(:small), alt: current_user.name, class: "gravatar") %></a>
+    <a href="<%= user_path(current_user) %>"><%= image_tag( current_user.photo.url(:small), alt: current_user.name, class: "gravatar") %></a>
   <% else %>
-  <a href="<%= user_path(current_user) %>"><%= gravatar_for user, size: 52 %></a>
-<% end %>
+    <a href="<%= user_path(current_user) %>"><%= gravatar_for current_user, size: 52 %></a>
+  <% end %>
     <span class="user">
       <%= link_to feed_item.user.name, feed_item.user %>
     </span>

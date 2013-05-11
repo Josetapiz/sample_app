@@ -11,13 +11,17 @@
 
       <%- unless @user.new_record? || !@user.photo? -%>
 
-      <%= f.label(:delete_photo, 'Delete photo') %>
+      <%= f.label(:delete_photo, 'Click here to delete photo') %>
       <%= image_tag(@user.photo.url, :alt => 'Photo', :title => 'Current photo') %>
       <%= f.check_box(:delete_photo) %>
   <%- end -%>
+
+</br>
       
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
+  </br>
+    <h4>Or Gravatar</h4>
     <%= gravatar_for @user %>
     <a href="http://gravatar.com/emails" target="_blank">change</a>
   </div>
