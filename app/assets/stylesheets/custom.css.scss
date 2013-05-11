@@ -230,3 +230,15 @@ aside {
     float: right;
   }
 }
+
+/*Some extra arrangements*/
+
+.definition {
+  /*border: 1px solid gray;*/
+  background-color: $grayMediumLight;
+  padding: 10px;
+  margin-bottom: 10px;
+  small {
+    color: gray;
+  }
+}
