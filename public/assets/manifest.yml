@@ -1,10 +1,12 @@
 ---
+favicon.ico: favicon-021d02d2c83564f889e85b1de84db3ab.ico
+favicon/index.ico: favicon-021d02d2c83564f889e85b1de84db3ab.ico
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 application.js: application-ac7cf8813224eb4f786e140b58e1a7a2.js
 application/index.js: application-ac7cf8813224eb4f786e140b58e1a7a2.js
-application.css: application-a785bfccb22b1d3f738ad774ef36d803.css
-application/index.css: application-a785bfccb22b1d3f738ad774ef36d803.css
+application.css: application-00a5f8b87e7e3ce382fe8c13e4424826.css
+application/index.css: application-00a5f8b87e7e3ce382fe8c13e4424826.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png

@@ -1,5 +1,5 @@
 <% if current_user.photo? %> 
-  <a href="<%= user_path(current_user) %>"><%= image_tag( current_user.photo.url(:small), alt: current_user.name, class: "gravatar") %></a>
+  <a href="<%= user_path(current_user) %>"><%= image_tag( current_user.photo.url(:small), alt: current_user.name, class: "photo") %></a>
 <% else %>
   <a href="<%= user_path(current_user) %>"><%= gravatar_for current_user, size: 52 %></a>
 <% end %>

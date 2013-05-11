@@ -1,6 +1,6 @@
 <li>
-  <% if user.photo? %>	
-    <%= image_tag user.photo.url(:small) %>
+  <% if user.photo? %>
+    <%= image_tag( user.photo.url(:small), alt: user.name, class: "photo") %>
   <% else %>
     <%= gravatar_for user, size: 52 %>
   <% end %>
