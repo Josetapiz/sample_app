@@ -27,3 +27,9 @@ jQuery(document).ready(function($) {
     $('.message').change(updateCountdown);
     $('.message').keyup(updateCountdown);
 });
+
+$(document).ready(function(){
+  $('.dropdown-menu form').on('click', function (e) {
+    e.stopPropagation()
+  });
+});

@@ -129,6 +129,16 @@ footer {
 
 /* forms */
 
+div.stuff {
+  margin: 0 auto;
+}
+
+.dropdown {
+  input, textarea, select, .uniditable-input{
+    width: 75%
+  }
+}
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;

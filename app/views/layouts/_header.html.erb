@@ -5,8 +5,8 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
-            <li><%= link_to "Help", help_path %></li>
             <% if current_user.admin? %>
               <li><%= link_to "Users", users_path %></li>
             <% end %>
@@ -24,8 +24,27 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Help", help_path %></li>
             <li><%= link_to "Sign in", signin_path %></li>
+            <div class="btn-group">
+              <div class="dropdown">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Sign In
+                <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="stuff" data-stopPropagation="true">
+                    <%= form_for(:session, url: sessions_path) do |f| %>
+                      <%= f.label :email, class: "stuff" %>
+                      <%= f.text_field :email, class: "stuff" %>
+
+                      <%= f.label :password, class: "stuff" %>
+                      <%= f.password_field :password, class: "stuff" %>
+
+                      <%= f.submit "Sign in", class: "btn btn-mini btn-primary" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
           <% end %>
         </ul>
       </nav>
