@@ -63,6 +63,10 @@ p {
 
 /* header */
 
+.btn-group {
+  margin-left: 5px;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -77,12 +81,6 @@ p {
     color: white;
     text-decoration: none;
   }
-}
-
-/*Some fixings, optionals*/
-
-.nav li:hover {
-  background-color: $gray;
 }
 
 /* footer */
@@ -129,13 +127,17 @@ footer {
 
 /* forms */
 
-div.stuff {
-  margin: 0 auto;
+#accountD {
+  color: $black;
+  font-size: 0.5em;
+  text-align: center;
 }
 
-.dropdown {
-  input, textarea, select, .uniditable-input{
-    width: 75%
+div.stuff {
+  margin: 0 auto;
+  text-align: center;
+  input, textarea, select, .uneditable-input {
+    width: 90%;
   }
 }
 

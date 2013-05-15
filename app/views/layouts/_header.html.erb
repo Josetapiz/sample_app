@@ -4,47 +4,12 @@
       <%= link_to "ChemTa", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
+          <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+          <li class="<%= 'active' if current_page?(help_path) %>"><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
-            <% if current_user.admin? %>
-              <li><%= link_to "Users", users_path %></li>
-            <% end %>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
+            <%= render 'shared/if_archive' %>
           <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-            <div class="btn-group">
-              <div class="dropdown">
-                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Sign In
-                <span class="caret"></span>
-                </a>
-                <div class="dropdown-menu">
-                  <div class="stuff" data-stopPropagation="true">
-                    <%= form_for(:session, url: sessions_path) do |f| %>
-                      <%= f.label :email, class: "stuff" %>
-                      <%= f.text_field :email, class: "stuff" %>
-
-                      <%= f.label :password, class: "stuff" %>
-                      <%= f.password_field :password, class: "stuff" %>
-
-                      <%= f.submit "Sign in", class: "btn btn-mini btn-primary" %>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <%= render 'shared/else_archive' %>
           <% end %>
         </ul>
       </nav>

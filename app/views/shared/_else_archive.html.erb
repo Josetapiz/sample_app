@@ -1,0 +1,19 @@
+<div class="btn-group">
+  <div class="dropdown">
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Sign In
+    <span class="caret"></span>
+    </a>
+    <div class="dropdown-menu">
+      <div class="stuff" data-stopPropagation="true">
+        <%= form_for(:session, url: sessions_path) do |f| %>
+<br/>
+          <%= f.text_field :email,placeholder: "Email" , class: "stuff" %>
+<br/>
+          <%= f.password_field :password,placeholder: "Password" , class: "stuff" %>
+<br/>
+          <%= f.submit "Sign in", class: "center btn btn-small btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
