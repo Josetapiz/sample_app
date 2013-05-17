@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/thoughtbot/paperclip.git
-  revision: 7d807c6af3e89c56e2e846352074f2eac1620115
+  revision: 022598c1e9982c9199d5b28971faa25281b0bb8d
   specs:
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
@@ -43,6 +43,9 @@ GEM
       rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    best_in_place (2.1.0)
+      jquery-rails
+      rails (~> 3.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.6)
@@ -113,14 +116,13 @@ GEM
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.7.7)
-    listen (1.0.3)
+    json (1.8.0)
+    listen (1.1.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
     lumberjack (1.0.3)
-    mail (2.5.3)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
@@ -129,7 +131,7 @@ GEM
     nokogiri (1.5.9-x86-mingw32)
     pg (0.12.2-x86-mingw32)
     polyglot (0.3.3)
-    pry (0.9.12.1-x86-mingw32)
+    pry (0.9.12.2-x86-mingw32)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
@@ -181,7 +183,7 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     rubyzip (0.9.9)
-    sass (3.2.8)
+    sass (3.2.9)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -191,7 +193,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
-    slop (3.4.4)
+    slop (3.4.5)
     spork (0.9.2)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -221,6 +223,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (= 2.5.0)
   bcrypt-ruby (= 3.0.1)
+  best_in_place
   bootstrap-sass (= 2.3.1.0)
   bootstrap-will_paginate (= 0.0.6)
   capybara (= 1.1.2)
