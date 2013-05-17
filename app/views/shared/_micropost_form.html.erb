@@ -2,7 +2,7 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new micropost...", class: 'message' %>
-    <span class="countdown"></span>
+    <div class="thisD"><span class="countdown"></span></div>
   </div>
-    <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+    <%= f.submit "Post", :disable_with => "Posting...", class: "lolo btn btn-large btn-primary" %>
 <% end %>

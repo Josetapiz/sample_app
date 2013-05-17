@@ -4,21 +4,68 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for @user, :html => { :multipart => true } do |f| %>
-      <%= render 'fields', f: f %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name, 'Full Name' %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <a href="#myMod" data-toggle="modal"><p>Change Password</p></a>
+        <div id="myMod" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            <h4>Please enter you password</h4>
+
+            <%= f.label :password, "New Password" %>
+            <%= f.password_field :password, placeholder: "New Password" %>
+
+            <%= f.label :password_confirmation, "Confirm Password" %>
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Ok</button>
+        </div>
+      </div>
 
       <%= f.label :photo, 'Profile Picture' %>
       <%= f.file_field :photo %>
 
       <%- unless @user.new_record? || !@user.photo? -%>
 
+      <%= image_tag(@user.photo.url, :alt => 'Photo', title: 'Current photo') %>
       <%= f.label(:delete_photo, 'Click here to delete photo') %>
-      <%= image_tag(@user.photo.url, :alt => 'Photo', :title => 'Current photo') %>
       <%= f.check_box(:delete_photo) %>
+      <br/>
   <%- end -%>
 
 </br>
-      
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Save Changes</a>
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            <h4>Please enter you password</h4>
+
+            <%= f.password_field :password, placeholder: "Password" %>
+
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <%= f.submit "Save changes", class: "btn btn-large btn-primary", :disable_with => "Saving..." %>
+        </div>
+      </div>
     <% end %>
   </br>
     <h4>Or Gravatar</h4>

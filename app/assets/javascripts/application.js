@@ -20,6 +20,13 @@ function updateCountdown() {
     // 140 is the max message length
     var remaining = 140 - jQuery('.message').val().length;
     jQuery('.countdown').text(remaining + '/140');
+    if (remaining < 0) {
+    	$('.thisD').css("color", "red");
+    	$('.lolo').removeClass('btn-primary').addClass('disabled');
+    } else {
+    	$('.thisD').css("color", "black");
+    	$('.lolo').removeClass('disabled').addClass('btn-primary');
+    }
 }
 
 jQuery(document).ready(function($) {

@@ -4,9 +4,9 @@
     <section>
       <h1>
         <% if @user.photo? %>  
-        <%= image_tag @user.photo.url(:small) %>
+          <%= render 'users/ifphoto' %>
         <% else %>
-        <%= gravatar_for @user, size: 52 %>
+          <%= render 'users/elsephoto' %>
         <% end %>
         <%= @user.name %>
       </h1>
